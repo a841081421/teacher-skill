@@ -6,7 +6,7 @@ AI learning assistant for Claude Code. Input `/learn` to get started with goal d
 
 ```bash
 # 1. Add this repo as a marketplace
-claude plugin marketplace add https://github.com/<your-username>/teacher-skill
+claude plugin marketplace add https://github.com/a841081421/teacher-skill
 
 # 2. Install the plugin
 claude plugin install teacher-skill@teacher-skill-marketplace
