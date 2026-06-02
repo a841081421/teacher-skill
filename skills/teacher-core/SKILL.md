@@ -11,7 +11,7 @@ One-concept-one-question teaching engine. Teach, verify, correct, repeat.
 
 ## When to Use
 
-- User says "start learning", "continue", "let's study"
+- User says "start learning", "continue", "let's study" / "开始学习", "继续", "开始吧"
 - `_progress.md` exists with unfinished topics
 
 ## Iron Law

@@ -25,9 +25,10 @@ NEVER START TEACHING WITHOUT CHECKING _progress.md FIRST
 ```
 User invokes /learn
        ↓
-  Ask: Where are your notes stored? (only if not remembered from prior session)
-       ↓
-  Read _progress.md from notes directory
+  _progress.md path known from prior session?
+    Yes → Read _progress.md from notes directory
+    No  → Ask: Where are your notes stored?
+           (Skip this question for first-time users — curriculum-builder handles it)
        ↓
   ┌──────────────────────────────────────┐
   │ File does not exist?                 │
@@ -55,9 +56,9 @@ User invokes /learn
 | Condition | Route to |
 |-----------|----------|
 | `_progress.md` not found | `curriculum-builder` |
-| User says "start", "study", "continue" | `teacher-core` |
-| User says "done", "wrap up", "summarize", "notes" | `note-generator` |
-| User says "progress", "plan", "adjust", "skip" | `progress-tracker` |
+| "start", "study", "continue" / "开始学习", "继续" | `teacher-core` |
+| "done", "wrap up", "summarize" / "学完了", "总结", "结束" | `note-generator` |
+| "progress", "plan", "adjust" / "进度", "调整计划", "跳过" | `progress-tracker` |
 | User states a new goal | Confirm → `curriculum-builder` |
 | Unclear intent | Ask: "Do you want to start learning, continue studying, check progress, or wrap up?" |
 

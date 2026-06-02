@@ -74,29 +74,18 @@ Based on skill count + study hours, distribute topics into phases.
 
 Present the plan and **wait for user confirmation**.
 
-After confirmation, create `_progress.md` in the notes directory:
+After confirmation, create `_progress.md` in the notes directory with three sections:
+- **Profile**: goal, notes directory path, daily study time, total duration, created date
+- **Plan**: phases from the confirmed plan, each topic as `- [ ] Topic — Level`
+- **Log**: empty section (entries added by teacher-core and note-generator)
 
-```markdown
-# Learning Progress
+## Rationalization Table
 
-## Profile
-- Goal: [user's goal]
-- Notes Directory: [path]
-- Daily Study Time: [X] hours
-- Total Duration: [X] weeks
-- Created: [YYYY-MM-DD]
-
-## Plan
-### Phase 1: [Name] (Week 1-2)
-- [ ] Topic A — Master
-- [ ] Topic B — Proficient
-
-### Phase 2: [Name] (Week 3-4)
-- [ ] Topic C — Familiar
-
-## Log
-<!-- Entries added by teacher-core and note-generator -->
-```
+| Excuse | Reality |
+|--------|---------|
+| "The user seemed happy with the skill tree, I'll skip plan confirmation" | Happiness ≠ approval; always get explicit "yes" or "looks good" |
+| "This is a simple goal, I can combine steps" | Simple goals still need structured plans; skipping steps creates misaligned expectations |
+| "I'll just use a generic template" | Generic plans fail; every goal needs tailored skill decomposition |
 
 ## Red Flags
 

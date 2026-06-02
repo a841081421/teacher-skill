@@ -11,7 +11,7 @@ Convert a teaching session into a structured Obsidian-friendly Markdown note and
 
 ## When to Use
 
-- User says "done for today", "let's wrap up", "summarize", "generate notes"
+- User says "done for today", "let's wrap up", "summarize" / "学完了", "总结吧", "结束"
 - End of a teaching session
 
 ## Iron Law
@@ -69,15 +69,12 @@ Use this template:
 
 ### Step 4: Update Progress
 
-Append to `_progress.md` Log section:
+**Check for existing entry first.** If today's date already has a Log entry in `_progress.md` (written by teacher-core), **update that entry** — do not append a duplicate. Only append a new date entry if none exists for today.
 
-```markdown
-### YYYY-MM-DD
-- Completed: [topic] (full/partial)
+Update/add these fields:
 - Notes: [filename]
-- Next: [what to continue]
+- Completed: [topic] (full/partial) — if not already marked
 - Mistakes corrected: [list]
-```
 
 Mark completed topics in Plan section: `- [x]`
 
