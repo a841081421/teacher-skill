@@ -36,7 +36,11 @@ User invokes /learn
   │                                      │
   │ File exists:                         │
   │   User says "study"/"continue"?      │
-  │     → Invoke teacher-core            │
+  │     Check Profile Teaching Mode:     │
+  │       "Socratic" → socratic-core     │
+  │       "Guided"   → teacher-core      │
+  │       Not set → Ask user to choose,  │
+  │                  save to Profile     │
   │                                      │
   │   User says "done"/"summarize"?      │
   │     → Invoke note-generator          │
@@ -48,6 +52,14 @@ User invokes /learn
   │     → Confirm abandon old plan?      │
   │       Yes → Invoke curriculum-builder│
   │       No  → Continue current plan    │
+  │                                      │
+  │   User says "Socratic"/"苏格拉底"?    │
+  │     → Save "Socratic" to Profile     │
+  │     → Invoke socratic-core           │
+  │                                      │
+  │   User says "Guided"/"讲授"?         │
+  │     → Save "Guided" to Profile       │
+  │     → Invoke teacher-core            │
   └──────────────────────────────────────┘
 ```
 
@@ -56,10 +68,12 @@ User invokes /learn
 | Condition | Route to |
 |-----------|----------|
 | `_progress.md` not found | `curriculum-builder` |
-| "start", "study", "continue" / "开始学习", "继续" | `teacher-core` |
+| "start", "study", "continue" / "开始学习", "继续" | Check Profile Teaching Mode → `teacher-core` or `socratic-core` |
 | "done", "wrap up", "summarize" / "学完了", "总结", "结束" | `note-generator` |
 | "progress", "plan", "adjust" / "进度", "调整计划", "跳过" | `progress-tracker` |
 | User states a new goal | Confirm → `curriculum-builder` |
+| "Socratic", "苏格拉底模式" | Save to Profile → `socratic-core` |
+| "Guided", "讲授模式" | Save to Profile → `teacher-core` |
 | Unclear intent | Ask: "Do you want to start learning, continue studying, check progress, or wrap up?" |
 
 ## First-Time User
