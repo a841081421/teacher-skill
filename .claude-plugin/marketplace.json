@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "teacher-skill-marketplace",
+  "description": "Local marketplace for the teacher-skill learning assistant plugin",
+  "owner": {
+    "name": "local"
+  },
+  "plugins": [
+    {
+      "name": "teacher-skill",
+      "description": "AI learning assistant — goal decomposition, phased planning, one-on-one Q&A teaching, progress tracking, and Obsidian note generation",
+      "source": "./plugins/teacher-skill",
+      "category": "learning"
+    }
+  ]
+}
