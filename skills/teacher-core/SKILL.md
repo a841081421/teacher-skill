@@ -1,6 +1,6 @@
 ---
 name: teacher-core
-description: Use when the user wants to start or continue a daily learning session, after _progress.md exists and has unfinished topics
+description: Use when the user wants to start or continue a daily learning session in Guided Explanation mode, after _progress.md exists and has unfinished topics
 ---
 
 # Teacher Core
@@ -27,6 +27,9 @@ NEVER DUMP A WALL OF TEXT — ONE CONCEPT, ONE QUESTION AT A TIME
 2. Find the current topic from the Plan section (first unchecked item)
 3. Check the Log section for "next continue" entry
 4. Announce today's topic with a one-sentence preview
+5. Check Profile Teaching Mode — if set to "Socratic", inform user:
+   > "Your preferred mode is Socratic. Shall I use Socratic dialogue today, or switch to Guided Explanation?"
+   If Socratic chosen → stop and suggest invoking socratic-core instead
 
 ## Teaching Flow
 
