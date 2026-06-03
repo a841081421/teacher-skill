@@ -75,7 +75,7 @@ Based on skill count + study hours, distribute topics into phases.
 Present the plan and **wait for user confirmation**.
 
 After confirmation, create `_progress.md` in the notes directory with three sections:
-- **Profile**: goal, notes directory path, daily study time, total duration, created date
+- **Profile**: goal, notes directory path, daily study time, total duration, teaching mode (default: Not Set), created date
 - **Plan**: phases from the confirmed plan, each topic as `- [ ] Topic — Level`
 - **Log**: empty section (entries added by teacher-core and note-generator)
 
