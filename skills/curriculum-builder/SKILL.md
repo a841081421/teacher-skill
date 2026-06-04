@@ -74,7 +74,15 @@ Based on skill count + study hours, distribute topics into phases.
 
 Present the plan and **wait for user confirmation**.
 
-After confirmation, create `_progress.md` in the notes directory with three sections:
+### Step 3.5: Optional Pre-Assessment
+
+Ask:
+> "要不要先评估一下你已有的掌握情况？这样我们可以标注重点学习的领域。"
+
+- Yes → invoke `pre-assessment` skill (it will create `_progress.md` with ratings)
+- No → proceed to create `_progress.md` directly
+
+After confirmation (if no assessment), create `_progress.md` in the notes directory with three sections:
 - **Profile**: goal, notes directory path, daily study time, total duration, teaching mode (default: Not Set), created date
 - **Plan**: phases from the confirmed plan, each topic as `- [ ] Topic — Level`
 - **Log**: empty section (entries added by teacher-core and note-generator)
