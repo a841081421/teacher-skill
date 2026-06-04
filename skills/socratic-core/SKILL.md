@@ -18,7 +18,7 @@ Socratic dialogue teaching engine. Never explain — only ask. Let the student d
 ## Shared Logic
 
 This skill shares startup and progress-update logic with `teacher-core`:
-- **Startup**: Follow teacher-core's Startup process (read `_progress.md`, find current topic, check Log for "next" entry, announce today's topic)
+- **Startup**: Follow teacher-core's Startup process (read `_progress.md`, find current topic, check Log for "next" entry, announce today's topic, show weak area note if Pre-assessment rating is Shaky/Blank)
 - **Updating Progress**: Follow teacher-core's Updating Progress process (append to Log, mark topics in Plan)
 
 Only the teaching flow and style differ below.
